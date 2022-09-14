@@ -1,6 +1,8 @@
-const hide = (item, answer) => {
-    if (!item.classList.contains('faq__item_show') || 
-        item.collision) return
+// Create faq block
+
+const hide = (faqItem, answer) => {
+    if (!faqItem.classList.contains('faq__item_show') || 
+        faqItem.collision) return
 
     answer.style.height = `${answer.offsetHeight}px`;
     answer.offsetHeight;
@@ -8,21 +10,21 @@ const hide = (item, answer) => {
     answer.style.height = 0;
     answer.style.overflow = 'hidden';
     answer.style.transition = 'height 0.3s ease-in-out';
-    item.classList.remove('faq__item_show');
-    item.collision = true;
+    faqItem.classList.remove('faq__item_show');
+    faqItem.collision = true;
 
     setTimeout(() => {
         answer.style.display = '';
         answer.style.height = '';
         answer.style.overflow = '';
         answer.style.transition = '';
-        item.collision = false;
+        faqItem.collision = false;
     }, 300);
 };
 
-const show = (item, answer) => {
-    if (item.classList.contains('faq__item_show') || 
-        item.collision) return
+const show = (faqItem, answer) => {
+    if (faqItem.classList.contains('faq__item_show') || 
+        faqItem.collision) return
 
     answer.style.display = 'block';
     const height = answer.offsetHeight;
@@ -31,15 +33,15 @@ const show = (item, answer) => {
     answer.style.transition = 'height 0.3s ease-in-out';
     answer.offsetHeight;
     answer.style.height = `${height}px`;
-    item.collision = true;
+    faqItem.collision = true;
 
     setTimeout(() => {
-        item.classList.add('faq__item_show');
+        faqItem.classList.add('faq__item_show');
         answer.style.display = '';
         answer.style.height = '';
         answer.style.overflow = '';
         answer.style.transition = '';
-        item.collision = false;
+        faqItem.collision = false;
     }, 300);
 };
 
