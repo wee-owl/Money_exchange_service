@@ -1,0 +1,129 @@
+.advantage__list-btn {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 55px;
+}
+
+.advantage__btn {
+    width: 180px;
+    height: 47px;
+    background-color: #68B7FF;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 27px;
+    color: #FFFFFF;
+    transition-property: border-color, background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+.advantage__btn:hover {
+    border-color: #1c88eb;
+}
+
+.advantage__btn_active, 
+.advantage__btn:active {
+    background-color: #1c88eb;
+    border-color: #1c88eb;
+}
+
+.advantage__item-content {
+    display: none;
+    max-width: 640px;
+    margin: 0 auto;
+    gap: 40px;
+    font-family: 'IBM';
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 29px;
+    align-items: center;
+}
+
+.advantage__item-content_active {
+    display: flex;
+}
+
+.advantage__item-content::before {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.convenience::before {
+    background-image: url('../../img/convenience.svg');
+}
+
+.speed::before {
+    background-image: url('../../img/speed.svg');
+}
+
+.quality::before {
+    background-image: url('../../img/quality.svg');
+}
+
+.security::before {
+    background-image: url('../../img/security.svg');
+}
+
+@media (max-width: 768px) {
+    .advantage__btn {
+        width: 160px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .advantage__list-btn {
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 35px;
+    }
+
+    .advantage__item-content {
+        max-width: 560px;
+        gap: 30px;
+        font-size: 16px;
+        line-height: 21px;
+    }
+}
+
+@media (max-width: 730px) {
+    .advantage__list-btn {
+        max-width: 340px;
+        margin: 0 auto 35px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .advantage__btn {
+        width: 140px;
+    }
+
+    .advantage__item-content {
+        gap: 10px;
+        line-height: 21px;
+        text-align: center;
+    }
+
+    .advantage__item-content_active {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .advantage__list-btn {
+        margin-bottom: 30px;
+    }
+
+    .convenience::before {
+        width: 60px;
+        height: 60px;
+    }
+}

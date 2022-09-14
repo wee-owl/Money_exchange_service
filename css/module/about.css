@@ -1,0 +1,50 @@
+.about {
+    padding: 40px 0;
+}
+
+.about__title {
+    margin-bottom: 35px;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 53px;
+    color: #55C2FF;
+}
+
+.about__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.about__advantage {
+    /*width: 100%;
+    flex-grow: 1;*/
+}
+
+.about__exchange {
+    max-width: 380px;
+}
+
+@media (max-width: 1024px) {
+    .about__container {
+        flex-direction: column;
+        align-items: center;
+        gap: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 30px 0;
+    }
+
+    .about__title {
+        font-size: 30px;
+        line-height: 36px;
+        margin-bottom: 20px;
+    }
+
+    .about__container {
+        gap: 40px;
+    }
+}
