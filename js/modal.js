@@ -33,7 +33,7 @@ form.addEventListener('submit', (e) => {
         tel: form.tel.value,
     };
 
-    fetch('https://api-form-order.herokuapp.com/api/order', {
+    fetch('https://cloudy-slash-rubidium.glitch.me/api/order', {
         method: 'post',
         body: JSON.stringify(data),
     })
